@@ -7,6 +7,7 @@ vim.keymap.set("n", "<leader>W", function()
     vim.opt.wrap = not vim.opt.wrap:get()
 end, { desc = "Toggle wrap" })
 
+vim.keymap.set("i", "<Tab>", "<Tab>", { noremap = true })
 vim.keymap.set("i", "<C-CR>", function()
     if require("copilot.suggestion").is_visible() then
         require("copilot.suggestion").accept()
